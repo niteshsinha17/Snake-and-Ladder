@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./snakeGame.css" />
+    <script
+      src="https://kit.fontawesome.com/a0acbb8bf8.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="first-screen">
+      <div class="backdrop"></div>
+      <div class="Entry-box">
+        <div class="game-name">
+          <h3>Snake and Ladder <span>Online</span></h3>
+        </div>
+        <div class="input-box">
+          <div class="input-heading">
+            <h5>Enter Player Information</h5>
+          </div>
+          <div style="flex-direction: row;" class="row">
+            <div class="col-md-6">
+              <div>
+                <input
+                  class="player-input inp1"
+                  placeholder="First Player Name"
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div>
+                <input
+                  class="player-input inp2"
+                  placeholder="Second Player Name"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="start-btn">Start</div>
+      </div>
+    </div>
+    <div class="winner-box">
+      <div class="winner"></div>
+    </div>
+    <div class="step-board playerS1">
+      <ul id="first-player-board">
+        <div class="playerBackdrop"></div>
+        <li class="name">First Player</li>
+      </ul>
+    </div>
+    <div class="step-board playerS2">
+      <ul id="second-player-board">
+        <div class="playerBackdrop"></div>
+        <li class="name">Second Player</li>
+      </ul>
+    </div>
+    <div class="snake-board">
+      <div class="player1"></div>
+      <div class="player2"></div>
+      <div class="row">
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+      </div>
+      <div class="row">
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+      </div>
+      <div class="row">
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+      </div>
+      <div class="row">
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+      </div>
+      <div class="row">
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+      </div>
+      <div class="row">
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+      </div>
+      <div class="row">
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+      </div>
+      <div class="row">
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+      </div>
+      <div class="row">
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+      </div>
+      <div class="row">
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+        <div class="row-block"></div>
+      </div>
+    </div>
+    <div style="    padding: 4px 7%;">
+      <div class="row">
+        <div class="controls col-md-4">
+          <div class="dice"></div>
+        </div>
+        <div class="col-md-6 player">
+          <div class="player-info"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./snakeGame.js"></script>
+  </body>
+</html>
