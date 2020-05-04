@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/snakeGame.css">
+    <link rel="stylesheet" href="../css/base.css" />
+    
+    <script
+      src="https://kit.fontawesome.com/a0acbb8bf8.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Snake and Ladder Web</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light ">
+      <a class="navbar-brand" href="#">Snake Game<span> Web</span></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">Home </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Game <span class="sr-only">(current)</a>
+          </li>
+          <li class="nav-item">
+           <a class="nav-link" href="./report.html">Report a bug</a>
+         </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="first-screen">
+      <div class="backdrop"></div>
+      <div class="Entry-box">
+        <div class="game-name">
+          <h3>Snake and Ladder <span>Online</span></h3>
+        </div>
+          <div class="input-box">
+            <div class="input-heading">
+              <h5>Enter Player Information</h5>
+            </div>
+            <h5 class="computer-mode" onclick="play_with_computer()">Play with computer</h5>
+            <h5></h5>
+            <form>
+              <div  class="row inputs">
+                <div class="col-md-6">
+                  <div>
+                    <input
+                      class="player-input inp1"
+                      placeholder="First Player Name"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div>
+                    <input
+                      class="player-input inp2"
+                      placeholder="Second Player Name"
+                    />
+                  </div>
+                </div>
+              </div>
+              <input id="start-btn" class="start-btn" type="submit" value="START">
+            </form>
+            
+            <!-- <div class="start-btn ">Start</div>                -->
+          </div>
+            
+      </div>
+    </div>
+    <div class="winner-box">
+      <div class="winner"> </div>
+      
+    </div>
+    <div class="step-board playerS1">
+      <div class="name" id="player1-name">
+      First Player
+      </div>
+      <ul id="first-player-board">
+      
+      </ul>
+    </div>
+    <div class="step-board playerS2">
+      <div class="name" id="player2-name">Second Player</div>
+      <ul id="second-player-board">
+    
+      </ul>
+    </div>
+    <div class="snake-board">
+      <div class="player1"></div>
+      <div  class="player2"></div>
+    </div>
+    <div style="padding: 4px 7%;">
+      <div class="row">
+        <div class="controls col-md-4">
+          <div id="play">Play <i class="fas fa-hand-point-right"></i></div>
+          <div class="dice"></div>
+          <div style="margin-left: 16px;" id="number" class="dice"></div>
+        </div>
+        <div class="col-md-6 player">
+          <div class="player-info"></div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="../js/snakeGame.js"></script>
+  </body>
+</html>

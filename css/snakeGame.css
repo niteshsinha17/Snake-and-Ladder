@@ -1,0 +1,352 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+.inputs{
+  flex-direction: row;
+   padding:25px 0px;
+ }
+ .input-box{
+  margin: 25px 0px;
+ }
+ 
+ .player-input {
+   padding: 6px;
+   width: 100%;
+   border: 0px;
+   outline: none;
+   background: none;
+   border-bottom: 1px solid;
+ }
+ .inp1 {
+   color: red;
+ }
+ .inp2 {
+   color: blue;
+ }
+
+ .first-screen {
+  position: fixed;
+  
+  top: 0%;
+  z-index: 6;
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+/* first screen-start */
+
+
+.backdrop {
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0.6;
+}
+.Entry-box {
+  position: absolute;
+  padding: 50px;
+  background: black;
+  text-align: center;
+  transition-duration: 1s;
+}
+
+.game-name {
+  padding: 10px;
+  font-family:sans-serif;
+}
+
+.start-btn {
+  width: fit-content;
+  padding: 2px 50px;
+  margin: auto;
+  background: white;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 40px;
+  cursor: pointer;
+  border: 0px;
+}
+.start-btn:hover {
+  transform: scale(1.2);
+}
+
+.input-heading h5 {
+  font-family: sans-serif;
+}
+
+.hide-backdrop {
+  display: none;
+}
+
+.hide-Entry-box {
+  display: none;
+}
+.hide {
+  display: none;
+}
+
+.game-name span {
+  color: orange;
+}
+
+
+
+/* first-screen-end */
+
+/* snake-board-start */
+
+.snake-board {
+  background-image: url(../images/snakeBoard.png);
+  background-size: contain;
+  height: 600px;
+  width: 600px;
+  margin: auto;
+  background-color: white;
+  position: relative;
+  z-index: 3;
+}
+.player1 {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: red;
+  border-radius: 50%;
+  left: 10px;
+  bottom: 10px;
+  transition-duration: 1s;
+}
+.player2 {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: blue;
+  border-radius: 50%;
+  left: 10px;
+  bottom: 10px;
+  transition-duration: 1s;
+}
+
+/* snake-board-end */
+.winner-box {
+    width: 100%;
+    top: -100%;
+    left: 0;
+    height: 100%;
+    background: black;
+    opacity: 0.9;
+    position: fixed;
+    z-index: 4;
+    display: none;
+    display: flex;
+    visibility: hidden;
+    
+
+}
+.winner {
+  font-size: 4rem;
+    font-family: sans-serif;
+    color: white;
+    letter-spacing: 2px;
+    width: 60%;
+    height: 400px;
+    margin: auto;
+    text-transform: capitalize;
+    text-align: center;
+}
+.board {
+  background: #ccc;
+  padding: 6% 0px;
+}
+.row-block {
+  width: 60px;
+  height: 60px;
+  border: 0px;
+  padding: 5px;
+  font-weight: 600;
+  font-family: cursive;
+  color: white;
+}
+
+.row:nth-of-type(even) {
+  flex-direction: row-reverse;
+}
+
+.player {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  font-size: 1.7rem;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+
+.dice {
+  border-radius: 50%;
+  background: #ccc;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+    
+}
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.step-board {
+  position: absolute;
+}
+.step-board ul {
+  list-style: none;
+}
+.playerS1 {
+  left: 5px;
+  color: red;
+}
+.playerS2 {
+  right: 5px;
+  color: blue;
+  text-align: right;
+}
+.name {
+  border-bottom: 2px solid;
+  font-size: 1.3rem;
+}
+/* input-box-start */
+
+.inputs{
+  margin: 0;
+  width: 100%;
+  display: flex;
+}
+
+
+
+
+.step-board ul li {
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.computer-mode{
+  color: coral;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+.computer-mode:hover{
+  color: orange;
+}
+#play{
+  font-size: 1.50rem;
+    text-transform: uppercase;
+    margin-right: 13px;
+}
+#play i{
+  color: orange;
+  font-size: 1.50rem;
+}
+
+/* media screen */
+
+@media screen and (max-width: 960px) {
+  
+  .step-board{
+    display: none;
+  }
+ 
+
+}
+@media screen and (max-width: 690px) {
+  
+  .step-board{
+    display: none;
+  }
+
+  .player1,.player2{
+    width: 30px;
+    height: 30px;
+  }
+  .snake-board{
+    width: 500px;
+    height: 500px;
+  }
+  .Entry-box{
+    padding: 15px;
+  }
+.game-name h3{
+  padding: 5px;
+  font-size: 1.24rem;
+}
+
+.input-heading{
+  font-size: 0.95rem;
+}
+
+.input-box{
+  margin: 0;
+}
+
+}
+@media screen and (max-width: 566px) {
+  
+  .step-board{
+    display: none;
+    
+  }
+  .player1,.player2{
+    width: 10px;
+    height: 10px;
+  }
+  .snake-board{
+    width: 300px;
+    height: 300px;
+    top: calc(50%-150px);
+  }
+ .game-name h3{
+   padding: 0%;
+ }
+ .input-box{
+   margin: 0;
+ }
+ .Entry-box{
+  width: 80%;
+  height: fit-content;
+ }
+.input-heading{
+  font-size: 0.95rem;
+}
+.computer-mode{
+  font-size: 0.85rem;
+  margin: 0px;
+}
+.start-btn{
+  padding: 0px 28px;
+  
+}
+.dice{
+  width: 30px;
+  height: 30px;
+}
+.play{
+  font-size: 1rem;
+}
+.dice{
+  font-weight: 600;
+    font-size: 1rem;
+}
+}
