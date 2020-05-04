@@ -384,23 +384,20 @@ defaultSetting()
       }
     }
     else{
-      if(players[player].bottom === positionConstrain.maxTopPosition && players[player].left === toMove ){
+      if(players[player].bottom === positionConstrain.maxTopPosition && players[player].left === toMove && toMove===6 ){
         changePlayer(player)
       }
-      console.log('in else')
-      // if(players[player].left - toMove === 0 ){
-      //   changePlayer()
-      //   console.log("q likha")
-      // }
-      if (players[player].left - toMove < 0) {
-        let movedDistance = players[player].left - positionConstrain.minRightPosition;
-        playerSetPosition(player, positionConstrain.minRightPosition);
-        playerSetHeight(player, players[player].bottom + 1);
-        playerSetPosition(player, toMove - movedDistance - 1);
-      } else {
-        const move = (players[player].left = players[player].left - toMove);
-        playerSetPosition(player, move);
-      }
+      else{
+        if (players[player].left - toMove < 0) {
+          let movedDistance = players[player].left - positionConstrain.minRightPosition;
+          playerSetPosition(player, positionConstrain.minRightPosition);
+          playerSetHeight(player, players[player].bottom + 1);
+          playerSetPosition(player, toMove - movedDistance - 1);
+        } else {
+          const move = (players[player].left = players[player].left - toMove);
+          playerSetPosition(player, move);
+        }
+      }      
     }    
   };
   
